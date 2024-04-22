@@ -13,7 +13,7 @@ import { connectDB } from "./database";
 const app = express();
 
 app.use(cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000", "https://chimerical-begonia-e2b17c.netlify.app"],
 }));
 
 app.use(express.json());
