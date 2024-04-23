@@ -1,7 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import AppRouter from "./router";
 
 
 dotenv.config();
@@ -13,12 +12,11 @@ import { connectDB } from "./database";
 const app = express();
 
 app.use(cors({
-    origin: ["http://localhost:3000", "https://chimerical-begonia-e2b17c.netlify.app"],
+    origin: ["http://localhost:3000", "https://chimerical-begonia-e2b17c.netlify.app"],    
 }));
 
 app.use(express.json());
 
-app.use("/api", AppRouter);
 
 app.use("*", notValidAPI);
 

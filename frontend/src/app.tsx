@@ -1,19 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
+import axios from "axios";
+import styles from "./styles/app.module.css";
+
 
 const App = () => {
 
   useEffect(()=>{
-    fetch("https://react-node-app-f3ho.onrender.com/api").then((res)=>res.json()).then((res)=>{
-      console.log(res);
-    })
-    .catch((err)=>{
-      console.log(err);
-    })
+  
 
   },[]);
 
   return (
-    <div>
+    <div className={styles.heading}>
       hello
     </div>
   )
