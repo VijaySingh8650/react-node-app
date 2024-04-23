@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import AppRouter from "./router";
 
 
 dotenv.config();
@@ -16,7 +17,7 @@ app.use(cors({
 }));
 
 app.use(express.json());
-
+app.use("/api", AppRouter);
 
 app.use("*", notValidAPI);
 
