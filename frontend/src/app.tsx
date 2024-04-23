@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import axios from "axios";
 import styles from "./styles/app.module.css";
+import Book from "./component/book";
 
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
 
   return (
     <div className={styles.heading}>
-      hello
+      <Book/>
     </div>
   )
 }
